@@ -1,131 +1,161 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* --- Layout and styling --- */
 
 body {
+  background-color: #0a0a0a;
+  color: #eee;
   font-family: 'Orbitron', sans-serif;
-  background-color: #0d0d0d;
-  color: #f4f4f4;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px 0;
+.site-header {
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 2px solid #00f2ff;
 }
 
-header {
-  background-color: #121212;
-  border-bottom: 2px solid #444;
-  padding: 20px 0;
-}
-
-.logo {
+.site-header .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo h1 {
-  font-size: 1.8rem;
+.site-header .logo img {
+  height: 40px;
+}
+
+.site-header nav a {
   color: #00f2ff;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  list-style: none;
-  margin-top: 10px;
-}
-
-nav a {
-  color: #ccc;
+  margin-left: 25px;
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-nav a:hover {
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  padding: 100px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #00f2ff 0%, #005f7f 100%);
+  color: #000;
+}
+
+.hero-section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-primary {
+  background-color: #00f2ff;
+  color: #000;
+  font-weight: 900;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #007799;
+}
+
+.info-section {
+  padding: 60px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid #222;
+}
+
+.info-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
   color: #00f2ff;
 }
 
-.hero {
-  background: url('https://wallpaperaccess.com/full/1654565.jpg') no-repeat center center/cover;
-  padding: 100px 20px;
-  text-align: center;
-  color: #fff;
-  background-blend-mode: multiply;
-  background-color: rgba(0,0,0,0.7);
+.info-section p,
+.info-section ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
+.info-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.info-section ul li {
+  margin-bottom: 12px;
+}
+
+.operators .operator-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.operator-card {
+  background: #111;
+  border: 2px solid #00f2ff;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.operator-card:hover {
+  transform: scale(1.05);
+  border-color: #00ccff;
+}
+
+.operator-card img {
+  width: 100%;
+  border-radius: 8px;
   margin-bottom: 15px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-
-.hero .btn {
-  background-color: #00f2ff;
-  color: #000;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.hero .btn:hover {
-  background-color: #00a8c6;
-}
-
-.section {
-  padding: 60px 0;
-}
-
-.dark {
-  background-color: #1a1a1a;
-}
-
-.nft-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.nft-item {
-  width: 200px;
-  background-color: #232323;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.nft-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.nft-item p {
-  margin-top: 10px;
+.operator-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
   color: #00f2ff;
-  font-size: 1rem;
 }
 
-footer {
+.connect-wallet-section {
   text-align: center;
-  padding: 20px 0;
-  background-color: #121212;
-  color: #888;
+  padding: 50px 30px;
+}
+
+.wallet-address {
+  margin-top: 15px;
+  font-weight: 700;
+  color: #0ff;
+}
+
+.site-footer {
+  background: #111;
+  color: #666;
+  padding: 20px 30px;
+  text-align: center;
   font-size: 0.9rem;
 }

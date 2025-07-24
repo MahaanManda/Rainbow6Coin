@@ -2,103 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rainbow6Coin – Tactical Crypto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rainbow6Coin - Tactical Crypto</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <!-- Custom SVG Logo -->
-      <div class="logo">
-        <svg width="50" height="50" viewBox="0 0 100 100">
-          <!-- stylized shield & “6” -->
-          <polygon points="50,5 95,20 95,80 50,95 5,80 5,20" fill="#00f2ff"/>
-          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
-            font-family="Orbitron" font-size="48" fill="#000">6</text>
-        </svg>
-        <h1>Rainbow6Coin</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#about">Intel</a></li>
-          <li><a href="#features">Specs</a></li>
-          <li><a href="#roadmap">Ops Plan</a></li>
-          <li><a href="#tokenomics">Tokenomics</a></li>
-          <li><a href="#nft">Operator NFTs</a></li>
-          <li><a href="#contact">Comm</a></li>
-        </ul>
-      </nav>
+  <header class="site-header">
+    <div class="logo">
+      <img src="https://i.imgur.com/9e91GlY.png" alt="Rainbow6Coin Logo" />
+      <h1>Rainbow6Coin</h1>
     </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#operators">Operators</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#connect">Connect Wallet</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Mission: Decentralize. Dominate.</h2>
-      <p>A crypto currency forged in the tactical world of elite operators.</p>
-      <a href="#" class="btn">Deploy Now</a>
-    </div>
+  <section class="hero-section">
+    <h2>Deploy Your Crypto Tactical Operation</h2>
+    <p>Rainbow6Coin - The ultimate crypto token inspired by Rainbow Six Siege, blending strategy, tactics, and blockchain technology.</p>
   </section>
 
-  <section id="tokenomics" class="section dark">
-    <div class="container">
-      <h3>Tokenomics</h3>
-      <canvas id="tokenChart" width="400" height="400"></canvas>
-    </div>
+  <section id="about" class="info-section">
+    <h2>About Rainbow6Coin</h2>
+    <p>Rainbow6Coin is a cutting-edge cryptocurrency built for tactical gamers and crypto enthusiasts alike. Inspired by Rainbow Six Siege, our coin delivers strategy-driven rewards and exclusive NFT operators.</p>
   </section>
 
-  <section id="nft" class="section">
-    <div class="container">
-      <h3>Operator NFT Gallery</h3>
-      <div class="nft-gallery">
-        <div class="nft-item"><img src="operator1.png" alt="Operator 1 NFT"><p>Operator‑Alpha</p></div>
-        <div class="nft-item"><img src="operator2.png" alt="Operator 2 NFT"><p>Operator‑Bravo</p></div>
-        <div class="nft-item"><img src="operator3.png" alt="Operator 3 NFT"><p>Operator‑Charlie</p></div>
-        <div class="nft-item"><img src="operator4.png" alt="Operator 4 NFT"><p>Operator‑Delta</p></div>
+  <section id="mission" class="info-section">
+    <h2>Our Mission</h2>
+    <ul>
+      <li>Deliver a secure and strategic crypto experience.</li>
+      <li>Integrate with gaming culture through NFTs and rewards.</li>
+      <li>Build a community of crypto operators and strategists.</li>
+    </ul>
+  </section>
+
+  <section id="operators" class="info-section operators">
+    <h2>Featured Operators</h2>
+    <div class="operator-cards">
+      <div class="operator-card">
+        <img src="https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1JPqwFEdnRf2fSXF5UkpaT/71f2f84b4223f44cb4b720fb0281c92a/valkyrie.png" alt="Operator Valkyrie" />
+        <h3>Valkyrie</h3>
+        <p>Master of surveillance, Valkyrie provides tactical awareness with her Black Eye cameras.</p>
+      </div>
+      <div class="operator-card">
+        <img src="https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/Knn4jw3n4oAjc0wxl2UvWI/d0966aa8d4aa4313e6d90d9ad0fdf12f/ash.png" alt="Operator Ash" />
+        <h3>Ash</h3>
+        <p>A fast entry attacker, Ash clears paths with her explosive breaching rounds.</p>
+      </div>
+      <div class="operator-card">
+        <img src="https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/PKfpRIEq0SDMYnAQU4UeCl/f4ac3d8b441ae7bfbf3bba96d1a5083d/sledge.png" alt="Operator Sledge" />
+        <h3>Sledge</h3>
+        <p>The breacher who smashes through walls and creates new paths for the team.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section dark">
-    <div class="container">
-      <h3>Comm Channel</h3>
-      <p>Email: ops@rainbow6coin.io</p>
-      <p>Twitter: <a href="#">@Rainbow6Coin</a></p>
-    </div>
+  <section id="tokenomics" class="info-section">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li><strong>Total Supply:</strong> 1,000,000,000 R6C</li>
+      <li><strong>Initial Distribution:</strong> 50% Public Sale, 25% Team, 15% Staking Rewards, 10% Reserve</li>
+      <li><strong>Utility:</strong> Stake tokens to earn exclusive operator NFTs and tactical perks.</li>
+    </ul>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Rainbow6Coin — Tactical Crypto Network</p>
-    </div>
+  <section id="connect" class="info-section connect-wallet-section">
+    <h2>Connect Your Wallet</h2>
+    <button id="connectWallet" class="btn-primary">Connect Wallet</button>
+    <p id="walletAddress" class="wallet-address"></p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Rainbow6Coin. Inspired by Rainbow Six Siege.</p>
   </footer>
 
-  <script>
-    // Chart.js tokenomics pie chart
-    const ctx = document.getElementById('tokenChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Public Sale', 'Team & Dev', 'Reserve', 'Community Rewards'],
-        datasets: [{
-          data: [40, 20, 25, 15],
-          backgroundColor: ['#00f2ff','#00a8c6','#008ba1','#005f6b']
-        }]
-      },
-      options: {
-        plugins: {
-          title: {
-            display: true,
-            text: 'Rainbow6Coin Token Allocation'
-          },
-          legend: {
-            position: 'right'
-          }
-        }
-      }
-    });
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
